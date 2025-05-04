@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: ваш_надёжный_пароль
+    port: 5678
