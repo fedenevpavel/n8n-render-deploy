@@ -1,4 +1,8 @@
 FROM n8nio/n8n
 
-CMD (wget -qO- "https://api.telegram.org/bot$TELEGRAM_TOKEN/setWebhook?url=https://$RENDER_EXTERNAL_URL/webhook" > /dev/null || true) && \
-    n8n start
+# Устанавливаем необходимые переменные окружения
+ENV NODE_ENV=production
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
+
+# Используем простой запуск без дополнительных команд
+CMD ["n8n", "start"]
