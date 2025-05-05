@@ -1,8 +1,8 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:1.33.0
 
-# Устанавливаем необходимые переменные окружения
+# Устанавливаем переменные окружения
 ENV NODE_ENV=production
 ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
 
-# Используем простой запуск без дополнительных команд
-CMD ["n8n", "start"]
+# Используем стандартный способ запуска
+CMD ["node", "/usr/local/bin/n8n"]
