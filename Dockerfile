@@ -1,13 +1,1 @@
 FROM n8nio/n8n
-
-ENV NODE_ENV=production
-ENV N8N_PROTOCOL=https
-ENV N8N_HOST=0.0.0.0
-ENV N8N_PORT=5678
-ENV WEBHOOK_URL=https://n8n-render-deploy-2.onrender.com
-ENV N8N_ENCRYPTION_KEY=dNyqt3BNrivqFYE2W3SbtpqXvCLed72k 
-ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
-
-EXPOSE 5678
-
-CMD ["n8n", "start"]
